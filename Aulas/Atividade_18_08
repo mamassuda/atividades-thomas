@@ -1,0 +1,13 @@
+# Atividade 18.08
+from gettext import install
+
+import pip
+
+import pandas as pd 
+import matplotlib.pyplot as plt 
+
+lista = [1, 2, 3, 4, 5]
+
+df = pd.DataFrame(lista, columns=['Valores'])
+plt.plot(df['Valores'])
+plt.show()
