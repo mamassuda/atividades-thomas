@@ -1,0 +1,24 @@
+Hoje utilizamos o Regexr
+
+um dos comandos foi: 
+    [RU]S?\$ \d*[,\.]?\d+[,\.]\d{2}
+
+isso identifica itens que representam valor em R$ e US$ 
+
+função gsub identifica e substitui determinados itens
+
+
+full_join
+inner_join
+left_join
+right_join
+
+
+biblioteca para criação de gráficos -> GGplot
+
+
+# ======================================================== # 
+Atividade de hoje será entregar um gráfico do banco de dados
+# ======================================================== # 
+
+
