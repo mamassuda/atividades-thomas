@@ -7,7 +7,7 @@ df = pd.read_csv('Pokemon_full.csv')
 
 print(df.columns)
 
-#! #! #! Gŕafico 1 - Attack por tipo #! #! #! 
+#! #! #! Teste 1 - Attack por tipo #! #! #! 
 
 df_mean_attack = df.groupby('type')['attack'].mean().sort_values(ascending=False)
 #? print(df_mean_attack)
@@ -36,7 +36,7 @@ plt.grid(axis='y', linestyle='--', alpha=0.6)
 plt.tight_layout() 
 plt.show(block=False)
 
-#! #! #! Gŕafico 2 - Defense por tipo #! #! #! 
+#! #! #! Teste 2 - Defense por tipo #! #! #! 
 
 
 df_mean_defense = df.groupby('type')['defense'].mean().sort_values(ascending=False)
@@ -65,7 +65,7 @@ ax.spines['right'].set_visible(False)
 plt.tight_layout()
 plt.show(block=False)
 
-#! #! #! Gráfico 3 - Relação entre as médias de Ataque e Defesa #! #! #!
+#! #! #! Gráfico final 3 - Relação entre as médias de Ataque e Defesa #! #! #!
 
 df_mean_stats = df.groupby('type')[['attack', 'defense']].mean()
 
@@ -102,7 +102,6 @@ plt.fill_between([linha_vertical, x_max], y_min, linha_horizontal, color='#fff3c
 # melhorando legibilidade
 # ==========================================
 for tipo, linha in df_mean_stats.iterrows():
-    # O '+ 0.8' no X e '- 0.2' no Y são os deslocamentos (offsets)
     # Eles garantem que o nome fique um pouco ao lado e abaixo da bolinha, sem encostar nela.
     # Diminuímos também o fontsize para 9 para poluir menos a tela.
     plt.text(linha['attack'] + 0.8, linha['defense'] - 0.2, tipo, fontsize=9, alpha=0.9)
@@ -124,7 +123,7 @@ plt.title('Relação entre as médias de Ataque e Defesa por Tipo de Pokémon', 
 plt.xlabel('Média do Ataque', fontsize=12)
 plt.ylabel('Média da Defesa', fontsize=12)
 
-# Fixando os limites para o gráfico não expandir infinitamente por causa da pintura
+# Fixando os limites para o gráfico não expandir infinitamente
 plt.xlim(x_min, x_max)
 plt.ylim(y_min, y_max)
 
