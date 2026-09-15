@@ -51,3 +51,6 @@ grafico1.save("grafico_pokemon.png", dpi=300)
 print("Gráfico salvo")
 
 
+
+
+
